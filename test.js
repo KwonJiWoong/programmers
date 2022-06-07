@@ -17,18 +17,22 @@ function solution(maps) {
                     if(maps_copy[now[0]][now[1] + 1] == 1){
                         answer++;
                         now[1]++;
+                        maps_copy[now[0]][now[1]] = 0;
                     }
                     else if(maps_copy[now[0] + 1][now[1]] == 1){
                         answer++;
                         now[0]++;
+                        maps_copy[now[0]][now[1]] = 0;
                     }
                     else if(maps_copy[now[0] - 1][now[1]] == 1){
                         answer++;
                         now[0]--;
+                        maps_copy[now[0]][now[1]] = 0;
                     }
                     else if(maps_copy[now[0]][now[1] - 1] == 1){
                         answer++;
                         now[1]--;
+                        maps_copy[now[0]][now[1]] = 0;
                     }
                     else{
                         return answer = -1;
